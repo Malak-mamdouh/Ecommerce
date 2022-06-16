@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field-underline{
+    display: none;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 14px;
+    color: #8b8b8b;
+    font-size: 0.875em;
+    display: flex;
+    align-items: center;
+    padding: 7px 0.75em 7px 0.75em !important;
+    background-color: transparent;
+    // height: 3.5rem;
+}
+
+[dir=rtl] .mat-dialog-actions .mat-button-base+.mat-button-base, [dir=rtl] 
+.mat-dialog-actions .mat-mdc-button-base+.mat-mdc-button-base{
+    margin-right: auto !important;
+}

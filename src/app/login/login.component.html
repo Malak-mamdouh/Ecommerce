@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>الدخول لحسابك</h1>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+  <form class="example-form">
+    <div>
+      <label for="" class="label-name">رقم الهاتف / البريد الالكتروني</label>
+      <mat-form-field appearance="fill">
+        <input matInput class="input-name" placeholder="ادخل البريد الالكتروني..." required>
+      </mat-form-field>
+      
+    </div>
+   
+    <div>
+      <label class="label-name">كلمة السر</label>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <input matInput type="password" placeholder="ادخل كلمة السر">
+      </mat-form-field>
+    </div>
+      
+  </form>
+</div>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary">تسجيل الدخول</button>
+  <button mat-raised-button color="warn">انشاء حساب جديد</button>
+</mat-dialog-actions>
