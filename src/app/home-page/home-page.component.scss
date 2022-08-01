@@ -1,0 +1,42 @@
+.card{
+    border: none;
+    position: relative;
+    transition: all 200ms ease;
+    padding-top: 40px;
+    // border-right: 1px solid rgba(0,0,0,.125);
+    &:hover{
+        box-shadow: 0 5px 25px rgb(0 0 0 / 10%);
+        z-index: 10;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        right: 0;
+        width: 1px;
+        background-color: rgba(0,0,0,.125);
+    }
+    .product-img{
+        height: 110px;
+        text-align: center;
+        img{
+            width: fit-content;
+        }
+    }
+    .card-body{
+        text-align: center;
+        .price{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .product-name a{
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+    .add-to-cart a{
+        width: 100%;
+    }
+}

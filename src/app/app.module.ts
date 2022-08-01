@@ -8,12 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CoreModule } from './core/core.module';
+import { HomePageComponent } from './home-page/home-page.component';
 import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    LoginComponent,
+    RegisterComponent,
+    DashboardComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
