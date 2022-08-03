@@ -1,3 +1,6 @@
 .form-control:focus , .btn:focus , .form-select:focus{
     box-shadow: none;
 }
+body{
+    overflow-x: hidden;
+}
