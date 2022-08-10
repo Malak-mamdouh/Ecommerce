@@ -9,13 +9,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CoreModule } from './core/core.module';
 import { HomePageComponent } from './home-page/home-page.component';
-import { AuthModule } from './auth/auth.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HomePageComponent
+    HomePageComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,8 +24,7 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    CarouselModule,
-    AuthModule
+    CarouselModule
   ],
   providers: [
     /*{provide: HTTP_INTERCEPTORS,

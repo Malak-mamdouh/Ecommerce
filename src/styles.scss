@@ -1,6 +1,10 @@
 .form-control:focus , .btn:focus , .form-select:focus{
     box-shadow: none;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 body{
     overflow-x: hidden;
 }
