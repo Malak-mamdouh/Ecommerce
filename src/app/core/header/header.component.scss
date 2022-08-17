@@ -1,7 +1,24 @@
+.nav-categories{
+    height: 50px;
+    background-color: #262626;
+    .navbar-brand{
+        color: #c3313b;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .nav-link{
+        display: inline-block;
+        color: #fff;
+        &:hover{
+            color: #dd676e;
+        }
+    }
+}
+
 .navbar.nav-main{
     background-color: #fff !important;
     .navbar-brand{
-        color: #0e8ce4;
+        color: #c3313b;
         font-size: 30px;
         font-weight: 500;
     }
@@ -11,7 +28,7 @@
     .search-box{
         margin: auto;
         width: 500px;
-        border: 2px solid #0e8ce4;
+        border: 2px solid #c3313b;
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem;
         height: 50px;
@@ -23,7 +40,7 @@
             background-color: transparent;
         }
         .btn-search{
-            background: #0e8ce4;
+            background: #c3313b;
             color: #fff;
             border-radius: 0;
             width: 10%;
@@ -39,19 +56,5 @@
         //     width: 40%;
         //     border-left: 1px solid #ddd !important;
         // }
-    }
-}
-
-.nav-categories{
-    height: 50px;
-    background-color: #232f3e;
-    .navbar-brand{
-        color: #0e8ce4;
-        font-size: 30px;
-        font-weight: 500;
-    }
-    .nav-link{
-        display: inline-block;
-        color: #fff;
     }
 }

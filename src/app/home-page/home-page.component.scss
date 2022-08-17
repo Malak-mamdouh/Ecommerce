@@ -1,6 +1,6 @@
 .hero-section{
-    background-image: url('../../assets/images/bg-banner.webp');
-    background-size: cover;
+    background-image: url('../../assets/images/banner_2.jpg');
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
     .banner-text{
@@ -8,10 +8,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .hero-title h3{
+            color: white;
+            font-size: 2.5rem;
+        }
         .hero-desc{
             font-size: 16px;
             font-weight: 300;
-            color: #828282;
+            color: white;
             line-height: 1.5;
             margin-top: 9px;
         }
@@ -156,9 +160,14 @@
                 border-top-right-radius: 0px;
                 border-top-left-radius: 0px;
                 line-height: 48px;
+                background-color: #c3313b;
+                border-color: #c3313b;
                 height: 48px;
                 padding: 0px;
                 width: 100%;
+                &:hover{
+                    background-color: #a8151f;
+                }
             }
         }
 }
