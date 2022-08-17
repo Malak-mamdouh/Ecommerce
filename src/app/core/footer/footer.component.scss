@@ -1,5 +1,5 @@
 footer{
-    background-color: #f8f8f8;
+    background-color: #ebe6e6;
     padding-block: 30px;
     .footer-title{
         line-height: 54px;
@@ -26,7 +26,7 @@ footer{
         .tel-number{        
             font-size: 18px;
             font-weight: 500;
-            color: #0e8ce4;
+            color: #a8151f;
         }
     }
     .address{
@@ -61,7 +61,7 @@ footer{
                     text-decoration: none;
                     text-shadow: rgb(0 0 0 / 7%) 0 0 13px;
                     &:hover{
-                        color: #0e8ce4;
+                        color: #a8151f;
                         text-shadow: rgb(0 0 0 / 7%) 0 0 13px;
                     }
                 }
@@ -88,7 +88,7 @@ footer{
                 margin-right: 20px;
                 &:hover{
                     a{
-                        color: #0e8ce4;
+                        color: #a8151f;
                     }
                 }
                 a{
@@ -122,7 +122,7 @@ footer{
             top: 0;
             right: 0;
             width: auto !important;
-            background: #0e8ce4;
+            background: #a8151f;
             color: #fff;
             border-radius: 0;
             width: 13%;

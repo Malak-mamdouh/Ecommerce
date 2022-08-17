@@ -1,0 +1,21 @@
+thead{
+    tr{
+        border-bottom: 2px solid #ddd;
+        text-align: center;
+    }
+}
+tbody{
+    tr{
+        td{
+            &:not(:first-child){
+                text-align: center;
+            }
+            .plus , .minus{
+                cursor: pointer;
+                color: red;
+                font-size: 25px;
+                font-weight: bold;
+            }
+        }
+    }
+}

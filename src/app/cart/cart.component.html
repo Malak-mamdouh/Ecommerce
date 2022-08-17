@@ -18,56 +18,57 @@ min-height: 100vh; display: flex; align-items: center;justify-content: center;">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="border-0 bg-light" scope="col">
-                                            <div class="p-2 px-3 text-uppercase">Product</div>
+                                        <th class="border-0 bg-light" style="width: 350px;" scope="col">
+                                            <div class="p-2 text-uppercase">Product</div>
                                         </th>
                                         <th class="border-0 bg-light" scope="col">
-                                            <div class="p-2 px-3 text-uppercase">Price</div>
+                                            <div class="py-2 text-uppercase">Price</div>
                                         </th>
                                         <th class="border-0 bg-light" scope="col">
-                                            <div class="p-2 px-3 text-uppercase">Quantity</div>
+                                            <div class="py-2 text-uppercase">Quantity</div>
                                         </th>
                                         <th class="border-0 bg-light" scope="col">
-                                            <div class="p-2 px-3 text-uppercase">Total</div>
+                                            <div class="py-2 text-uppercase">Total</div>
                                         </th>
                                         <th class="border-0 bg-light" scope="col">
-                                            <div class="p-2 px-3 text-uppercase">Remove</div>
+                                            <div class="py-2 text-uppercase">Remove</div>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">
+                                        <td>
                                             <div class="p-2">
                                                 <img src="../../assets/images/camera_1.webp" 
                                                 alt="noImage" 
-                                                class="img-fluid" style="max-height: 50px;">
+                                                class="img-fluid me-3" style="max-height: 50px;">
                                                 <div class="ml-3 d-inline-block align-middle">
-                                                    <h5 class="mb-0">
-                                                        <a style="cursor: pointer;" class="text-dark"></a>
-                                                    </h5>
+                                                    <h6 class="mb-0">
+                                                        <a style="cursor: pointer;" 
+                                                        class="text-dark text-decoration-none">
+                                                        Huawei Nova 7i
+                                                        </a>
+                                                    </h6>
                                                     <span class="text-muted font-weight-normal
                                                     font-italic d-block">
                                                     Mobile
                                                     </span>
                                                 </div>
                                             </div>
-                                        </th>
-                                        <td class="align-middle">
-                                            <strong>2000</strong>
                                         </td>
                                         <td class="align-middle">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fa fa-minus-circle text-warning mr-2"
-                                                style="cursor:pointer; font-size: 2em"></i>
+                                            <strong>$2000</strong>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="d-flex align-items-center justify-content-evenly">
+                                                <span class="minus">-</span>
                                                 <span class="font-weight-bold"
                                                 style="font-size: 1.5em;">2</span>
-                                                <i class="fa fa-plus-circle text-warning mx-2"
-                                                style="cursor:pointer; font-size: 2em"></i>
+                                                <span class="plus">+</span>
                                             </div>
                                         </td>
                                         <td class="align-middle">
-                                           <strong>2000</strong> 
+                                           <strong>$2000</strong> 
                                         </td>
                                         <td class="align-middle text-center">
                                             <a class="text-danger">
@@ -82,8 +83,32 @@ min-height: 100vh; display: flex; align-items: center;justify-content: center;">
                 </div>
                 <div class="row">
                 
-                    <div class="col-4">
-                        <a class="btn btn-outline-danger py-2 btn-block" style="min-width: 250px; max-width: auto;">
+                    <div class="col-12 col-sm-4">
+                        <div class="bg-light px-4 py-3 text-uppercase font-weight-bold" 
+                        style="min-width: 250px; max-width: auto; border-bottom: 2px solid #ddd">
+                            Order Summary
+                        </div>
+                        <div class="bg-light px-4 text-uppercase font-weight-bold">
+                            
+                        </div>
+                        <div class="p-4" style="min-width: 250px; max-width: auto;">
+                            <ul class="list-unstyled mb-4">
+                                <li class="d-flex py-3 justify-content-between border-bottom">
+                                    <strong class="text-muted">Shipping</strong>
+                                    <strong>300</strong>
+                                </li>
+                                <li class="d-flex py-3 justify-content-between border-bottom">
+                                    <strong class="text-muted">SubTotal</strong>
+                                    <strong>500</strong>
+                                </li>
+                                <li class="d-flex py-3 justify-content-between border-bottom">
+                                    <strong class="text-muted">Total</strong>
+                                    <strong>500</strong>
+                                </li>
+                            </ul>
+                        </div>                        
+                        <a class="btn btn-outline-danger py-2 btn-block"
+                         style="width: 100%;">
                             Checkout
                         </a>
                     </div>
