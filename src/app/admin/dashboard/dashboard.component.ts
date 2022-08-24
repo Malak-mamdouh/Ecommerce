@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../auth/user/services/auth.service';
 import { Router } from '@angular/router';
@@ -7,20 +7,20 @@ import * as DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
 import { User } from '../../auth/user/models/user';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SafeHtml } from '@angular/platform-browser';
+declare const $: any;
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit{
 
   status: boolean = true;
   editorText = '';
   public Editor = DecoupledEditor;
   htmlData: string = '<p>Hello, world!</p>';
   public safeText: SafeHtml = this._sanitizer.bypassSecurityTrustHtml('');
-  // .bypassSecurityTrustHtml('<p style="background-color: red">Hello World!</p>');
   data: {name:string , password: string , desc: string} = {name:'' , password: '' , desc: ''}
   testForm: FormGroup=new FormGroup({
     username:new FormControl('' , Validators.required),
@@ -55,6 +55,7 @@ export class DashboardComponent implements OnInit {
         ['link', 'image', 'video']                         // link and image, video
       ]
     };
+    console.log(this._router.url);
   }
 
   change(event: any){

@@ -1,5 +1,10 @@
-<app-header></app-header>
-<main style="min-height: calc(100vh - 300px);">
-    <router-outlet></router-outlet>
-</main>
-<app-footer></app-footer>
+<ng-container >
+    <app-header *ngIf="!href"></app-header>
+    <main style="min-height: calc(100vh - 300px);">
+        <router-outlet></router-outlet>
+    </main>
+    <app-footer *ngIf="!href"></app-footer>
+</ng-container>
+
+<!-- <router-outlet name="dashboard"></router-outlet> -->
+<!-- <app-dashboard *ngIf="admin"></app-dashboard> -->

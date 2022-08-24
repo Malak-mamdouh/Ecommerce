@@ -15,28 +15,16 @@
                     </li>
                     
                     <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a routerLink="product-list" data-bs-toggle="collapse" 
+                        class="nav-link px-0 align-middle">
                             <i class="fa fa-th-large" aria-hidden="true"></i> 
-                            <span class="ms-2 d-none d-sm-inline">Products</span> </a>
-                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                            </li>
-                            <li  class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                            </li>
-                        </ul>
+                            <span class="ms-2 d-none d-sm-inline">Products</span> 
+                        </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link px-0 align-middle">
+                        <a routerLink="category-list" class="nav-link px-0 align-middle">
                             <i class="fa fa-th-large" aria-hidden="true"></i>
-                            <span class="ms-2 d-none d-sm-inline">Ctaegories</span>
+                            <span class="ms-2 d-none d-sm-inline">Categories</span>
                         </a>
                     </li>
                 </ul>
@@ -57,21 +45,11 @@
                 </div>
             </nav>
             
-            <form [formGroup]="testForm" class="login-container" (submit)="onLogin()">
-                <input type="text" placeholder="Email" class="input" formControlName="username"><br>
-                <input type="password" placeholder="Password"  class="input" formControlName="password"><br>
-      
-                <span class="remember"> <a href="#">Forgot Password ?</a> </span>
-
-                <ckeditor [editor]="Editor" formControlName="desc" [(ngModel)]="htmlData" (ready)="onReady($event)" 
-                    (change)="onChange($event)"></ckeditor>
-      
-                <button class="submit mt-3" type="submit">Submit</button>
-      
-             </form>
-
-             <div [innerHTML]="safeText">
-             </div>
+            <router-outlet></router-outlet>
+            
         </div>
     </div>
 </div>
+
+
+
