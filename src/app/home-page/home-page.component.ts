@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o/public_api';
+import { concat, forkJoin, fromEvent } from 'rxjs';
+import { tap, map, switchMap } from 'rxjs/operators';
+import { of } from 'rxjs/internal/observable/of';
 
 @Component({
   selector: 'app-home-page',
@@ -31,9 +34,12 @@ export class HomePageComponent implements OnInit {
     },
     nav: false
   }
+  source = of(1,2,4);
   constructor() { }
 
   ngOnInit(): void {
+    
+    // const example = this.source.pipe(map());
   }
 
 }

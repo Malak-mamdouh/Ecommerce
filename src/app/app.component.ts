@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
 // import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import * as DecoupledEditor from "@ckeditor/ckeditor5-build-decoupled-document";
+import { Location } from '@angular/common';
+import { NavigationStart, Router ,  Event as NavigationEvent  } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -10,9 +13,26 @@ import * as DecoupledEditor from "@ckeditor/ckeditor5-build-decoupled-document";
 })
 export class AppComponent {
   title = 'Ecommerce';
+  admin = true;
   public Editor = DecoupledEditor;
   htmlData: string = '<p>Hello, world!</p>';
-  constructor(){}
+  href: boolean;
+  // event$ 
+
+  constructor(private _router: Router , private _location: Location){
+    // this.event$
+    //   =this._router.events
+    //       .subscribe(
+    //         (event: NavigationEvent ) => {
+    //           if(event instanceof NavigationStart) {
+    //             console.log(event.url);
+    //           }
+    //         });
+    this.href = this._location.path().includes('admin-panel');
+    console.log(!!this.href);
+  }
+
+
   public onReady(editor:any) {
     editor.ui.view.editable.element.parentElement.insertBefore(
       editor.ui.view.toolbar.element,

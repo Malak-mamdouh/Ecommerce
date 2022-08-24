@@ -8,3 +8,62 @@ input::-webkit-inner-spin-button {
 body{
     overflow-x: hidden;
 }
+// .dataTables_wrapper .dataTables_paginate{
+//   display: none !important;
+// }
+.dataTables_wrapper{
+  .dataTables_paginate{
+    .previous , .next{
+      display: none !important;
+    }
+  }
+}
+.dataTables_wrapper .dataTables_paginate{
+  width: 100%;
+  text-align: center;
+}
+thead{
+  tr{
+    th{
+      color: #0dabb3 !important;
+    }
+  }
+}
+tbody{
+  tr{
+    td.sorting_1{
+      color: black !important;
+      font-weight: 600;
+    }
+  }
+}
+.dataTables_wrapper .dataTables_length select{
+  appearance: none;
+  width: 60px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  border-radius: 50%;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background: #fff !important;
+  color: black !important;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+  border-radius: 50%;
+  background: #3a7c1c !important;
+  color: #fff !important;
+  border: 1px solid #3a7c1c;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  background-color: #d1dda7;
+  display: none;
+}
+.dataTables_info{
+  display: none !important;
+}
+.ck.ck-editor__editable_inline{
+  border: 1px solid #c4c4c4 !important;
+}

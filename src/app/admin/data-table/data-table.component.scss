@@ -1,0 +1,17 @@
+.dataTables_wrapper {
+    &.dataTables_paginate{
+        display: none !important;
+    }
+}
+.dataTables_info{
+    display: none !important;
+}
+i{
+    color: #5b9d33;
+}
+table.dataTable thead .sorting:last-child{
+    background-image: none;
+}
+table.dataTable.no-footer{
+    border-bottom: none;
+}
