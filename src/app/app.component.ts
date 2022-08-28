@@ -29,7 +29,6 @@ export class AppComponent {
     //           }
     //         });
     this.href = this._location.path().includes('admin-panel');
-    console.log(!!this.href);
   }
 
 

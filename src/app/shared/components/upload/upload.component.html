@@ -1,0 +1,9 @@
+<form [formGroup]="ParentForm">
+    <div class="file-container mb-3">
+        <div class="drag-container">
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            <p class="text">Browse File to Upload</p>
+        </div>
+        <input type="file" class="file" formControlName="image" (change)="getFile($event)">
+    </div>
+</form>

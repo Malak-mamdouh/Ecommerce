@@ -21,7 +21,7 @@
     height: 40px;
     label{
         position: absolute;
-        left: 1rem;
+        left: 0.8rem;
         top: 0.5rem;
         padding:0 .25rem;
         transition: all .3s ease-in-out;
@@ -30,13 +30,14 @@
         // background-color: #fff;
         z-index: 1;
     }
-    input{
+    .form_input{
         position: absolute;
         &:focus{
             border: 1px solid #00b5ad;
         }
         &:focus + label{
             transform: translateY(-20px);
+            // top: -5px;
             font-size: .8rem;
             font-weight: 500;
             // padding-inline: 10px;
@@ -44,34 +45,15 @@
             // left: 10px;
             background-color: #fff;
         }
-    }
-}
-.file-container{
-    position: relative;
-    height: 200px;
-    border: 2px dashed #00b5ad;
-    border-radius: 5px;
-    .drag-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        i{
-            font-size: 50px;
-        }
-        p{
-            font-size: 16px;
-        }
-        :where(i , p){
+        &:not(:placeholder-shown).form_input:not(:focus) + label{
+            transform: translateY(-20px);
+            // top: -5px;
+            font-size: .8rem;
+            font-weight: 500;
             color: #00b5ad;
+            // padding-inline: 10px;
+            // left: 10px;
+            background-color: #fff;
         }
-    }
-    .file{
-        top: 0;
-        opacity: 0;
-        width: 100%;
-        position: absolute;
-        height: 100%;
     }
 }
