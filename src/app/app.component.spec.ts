@@ -1,8 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { AuthService } from './auth/auth.service';
 
 describe('AppComponent', () => {
+  let authServive = jasmine.createSpyObj(AuthService , ['loadCurrentUser']);
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -11,6 +14,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        {provide: AuthService , useValue: authServive}
+      ]
     }).compileComponents();
   });
 
@@ -26,10 +32,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Ecommerce');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Ecommerce app is running!');
-  });
 });

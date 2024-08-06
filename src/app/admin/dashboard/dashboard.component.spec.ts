@@ -1,14 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
+import { AuthService } from 'src/app/auth/auth.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
+  let authService = jasmine.createSpyObj('AuthService' , [''])
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ DashboardComponent ],
+      providers: [
+        {provide: AuthService , useValue: authService}
+      ]
     })
     .compileComponents();
   });
