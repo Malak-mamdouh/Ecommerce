@@ -4,6 +4,7 @@ import { RegisterComponent } from './register.component';
 import { AuthService } from '../auth.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -13,7 +14,10 @@ describe('RegisterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule , 
+        ReactiveFormsModule,
+            FormsModule,
+      ],
       declarations: [ RegisterComponent],
       providers: [
         {provide: AuthService , useValue: authService},
