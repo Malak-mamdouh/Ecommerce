@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { CoreModule } from './core/core.module';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -18,7 +18,10 @@ import { CategoryListComponent } from './admin/categories/category-list/category
 import { CategoryAddComponent } from './admin/categories/category-add/category-add.component';
 import { UploadComponent } from './shared/components/upload/upload.component';
 // import { DataTablesModule } from 'angular-datatables';
-
+import { TokenInterceptorService } from './auth/token-interceptor.service';
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -41,9 +44,16 @@ import { UploadComponent } from './shared/components/upload/upload.component';
     CarouselModule,
     FormsModule,
     ReactiveFormsModule,
-    CKEditorModule
+    CKEditorModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
+    {provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
     /*{provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorInterceptor,
       multi: true

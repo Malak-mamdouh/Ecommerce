@@ -1,0 +1,40 @@
+h5{
+    font-size: 28px;
+}
+.register-container{
+    background: white;
+    padding-block: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    h5{
+        text-align: center;
+    }
+}
+.register{
+    width: 100%;
+    border: 1px solid #c3313b;
+    color: #c3313b;
+    background-color: #fff;
+}
+.register-form{
+    margin-top: 20px;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-control{
+    // width: 280px;
+}
+.register-page{
+    background-color: rgb(241, 241, 241);
+    // min-height: calc(100vh - 120px);
+}
+.btn-register{
+    color: #fff;
+    width: 100%;
+    background-color: #c3313b;
+    border-color: #c3313b;
+}

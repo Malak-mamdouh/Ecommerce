@@ -7,9 +7,12 @@ import { ProductAddComponent } from './admin/products/product-add/product-add.co
 import { ProductListComponent } from './admin/products/product-list/product-list.component';
 import { CategoryListComponent } from './admin/categories/category-list/category-list.component';
 import { CategoryAddComponent } from './admin/categories/category-add/category-add.component';
+import { AuthGaurdService } from './auth/auth-guard.service';
 
 const routes: Routes = [
-  {path: '' , component: HomePageComponent , pathMatch: 'full'},
+  {path: '' , component: HomePageComponent , canActivate: [AuthGaurdService] , pathMatch: 'full'},
+  {path: 'account' , 
+  loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   {path: 'admin-panel' , component: DashboardComponent ,  children: [
     {path: 'product-list' , component: ProductListComponent},
     {path: 'add-product' , component: ProductAddComponent},
